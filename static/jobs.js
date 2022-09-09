@@ -1,8 +1,10 @@
+import QuantoxLogo from "../public/images/quantox-logo.png";
+import Placeholder from "../public/images/company-placeholder.png";
+
 export const jobs = [
   {
     id: 1,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: QuantoxLogo,
     imgAlt: "Quantox Technology",
     company: "Quantox Technology",
     role: "Medior Front End Developer",
@@ -11,8 +13,7 @@ export const jobs = [
   },
   {
     id: 2,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: Placeholder,
     imgAlt: "Freelance",
     company: "Freelance",
     role: "Web Developer",
