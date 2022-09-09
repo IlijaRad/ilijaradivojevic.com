@@ -1,6 +1,9 @@
-import SocialLink from "../components/SocialLink";
-import ThemeToggler from "../components/ThemeToggler";
 import { socialLinks } from "../static/socialLinks";
+import { homePageImages } from "../static/homePageImages";
+
+import ThemeToggler from "../components/ThemeToggler";
+import SocialLink from "../components/SocialLink";
+import HomePageImage from "../components/HomePageImage";
 
 export default function Home() {
   return (
@@ -181,46 +184,14 @@ export default function Home() {
           </div>
           <div className="mt-16 sm:mt-20">
             <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-              <div className="relative aspect-[9/10] w-44 flex-none rotate-2 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl">
-                <img
-                  src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=828&q=100"
-                  alt="123"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover"
+              {homePageImages.map(({ id, src, alt, rotateNegative }) => (
+                <HomePageImage
+                  key={id}
+                  src={src}
+                  alt={alt}
+                  rotateNegative={rotateNegative}
                 />
-              </div>
-              <div className="relative aspect-[9/10] w-44 flex-none -rotate-2 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl">
-                <img
-                  src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=828&q=100"
-                  alt="123"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </div>
-              <div className="relative aspect-[9/10] w-44 flex-none rotate-2 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl">
-                <img
-                  src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=828&q=100"
-                  alt="123"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </div>
-              <div className="relative aspect-[9/10] w-44 flex-none rotate-2 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl">
-                <img
-                  src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=828&q=100"
-                  alt="123"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </div>
-              <div className="relative aspect-[9/10] w-44 flex-none -rotate-2 overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl">
-                <img
-                  src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=828&q=100"
-                  alt="123"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </div>
+              ))}
             </div>
           </div>
           <div className="mt-24 sm:px-8 md:mt-28">
