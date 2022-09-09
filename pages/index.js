@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <div className="text-red-500">Hello world</div>
+      <div className="text-red-500">Hellaaao world</div>
     </>
   );
 }
