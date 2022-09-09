@@ -8,3 +8,15 @@
     font-feature-settings: "cv09", "cv11", "cv01", "cv02", "cv03", "cv04";
   }
 }
+
+:root {
+  --header-position: sticky;
+  --content-offset: 116px;
+  --header-height: 180px;
+  --header-mb: -116px;
+  --avatar-image-transform: translate3d(0rem, 0, 0) scale(1);
+  --avatar-border-transform: translate3d(-0.222222rem, 0, 0) scale(1.77778);
+  --avatar-border-opacity: 0;
+  --header-top: 0px;
+  --avatar-top: 0px;
+}
