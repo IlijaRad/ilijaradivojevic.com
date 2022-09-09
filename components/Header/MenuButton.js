@@ -1,4 +1,4 @@
-import ArrowDownIcon from "../../public/icons/arrow-down.svg";
+import CaretDownIcon from "../../public/icons/caret-down.svg";
 
 const MenuButton = () => {
   return (
@@ -11,7 +11,7 @@ const MenuButton = () => {
         data-headlessui-state=""
       >
         Menu
-        <ArrowDownIcon />
+        <CaretDownIcon />
       </button>
     </div>
   );
