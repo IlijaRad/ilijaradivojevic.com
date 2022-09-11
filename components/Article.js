@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ArrowRightIcon from "../public/icons/arrow-right.svg";
+import ChevronRightIcon from "../public/icons/chevron-right.svg";
 
 const Article = ({ title, date, description, slug }) => {
   return (
@@ -33,7 +33,7 @@ const Article = ({ title, date, description, slug }) => {
         className="relative z-10 mt-4 flex items-center text-sm font-medium text-primary-500"
       >
         Read article
-        <ArrowRightIcon />
+        <ChevronRightIcon />
       </div>
     </article>
   );
