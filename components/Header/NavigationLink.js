@@ -4,7 +4,7 @@ const NavigationLink = ({ url, text }) => {
   return (
     <li>
       <Link href={url}>
-        <a className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400">
+        <a className="hover:text-primary-500 dark:hover:text-primary-400 relative block px-3 py-2 transition">
           {text}
         </a>
       </Link>
