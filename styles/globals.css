@@ -9,18 +9,6 @@
   }
 }
 
-:root {
-  --header-position: sticky;
-  --content-offset: 116px;
-  --header-height: 180px;
-  --header-mb: -116px;
-  --avatar-image-transform: translate3d(0rem, 0, 0) scale(1);
-  --avatar-border-transform: translate3d(-0.222222rem, 0, 0) scale(1.77778);
-  --avatar-border-opacity: 0;
-  --header-top: 0px;
-  --avatar-top: 0px;
-}
-
 .h1 {
   @apply text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl;
 }
