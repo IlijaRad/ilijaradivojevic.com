@@ -1,5 +1,5 @@
-import GithubIcon from "../public/icons/github.svg";
-import LinkedInIcon from "../public/icons/linkedin.svg";
+import GithubIcon from "../components/Icons/GithubIcon";
+import LinkedInIcon from "../components/Icons/LinkedInIcon";
 
 export const socialLinks = [
   {

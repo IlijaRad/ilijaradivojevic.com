@@ -27,7 +27,7 @@ export default function Home() {
                 <div className="mt-6 flex gap-6">
                   {socialLinks.map(({ id, ariaLabel, url, Svg }) => (
                     <SocialLink key={id} ariaLabel={ariaLabel} url={url}>
-                      <Svg />
+                      <Svg className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
                     </SocialLink>
                   ))}
                 </div>
