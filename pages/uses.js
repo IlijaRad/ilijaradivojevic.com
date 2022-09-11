@@ -1,4 +1,4 @@
-const uses = () => {
+const Uses = () => {
   return (
     <div className="mt-16 sm:mt-32 sm:px-8">
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -100,4 +100,4 @@ const uses = () => {
   );
 };
 
-export default uses;
+export default Uses;
