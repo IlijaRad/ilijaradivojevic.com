@@ -11,11 +11,6 @@ const Layout = ({ children }) => {
       </div>
       <div className="relative">
         <Header />
-        <div
-          style={{
-            height: "var(--content-offset)",
-          }}
-        ></div>
         <main>{children}</main>
         <Footer />
       </div>
