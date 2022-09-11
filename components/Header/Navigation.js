@@ -1,20 +1,34 @@
 import { navigationLinks } from "../../static/navigationLinks";
-import NavigationLink from "./NavigationLink";
-import { Popover, Transition } from "@headlessui/react";
-import CaretDownIcon from "../../public/icons/caret-down.svg";
-import CloseIcon from "../../public/icons/close.svg";
 import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
+import clsx from "clsx";
 import Link from "next/link";
 
-export const DesktopNavigation = () => {
+import CaretDownIcon from "../../public/icons/caret-down.svg";
+import CloseIcon from "../../public/icons/close.svg";
+
+const NavItem = ({ url, text }) => {
+  const { asPath } = useRouter();
+  const isActiveLink = asPath === url;
   return (
-    <nav className="pointer-events-auto hidden md:block">
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        {navigationLinks.map(({ id, url, text }) => (
-          <NavigationLink key={id} url={url} text={text} />
-        ))}
-      </ul>
-    </nav>
+    <li>
+      <Link href={url}>
+        <a
+          className={clsx(
+            "relative block px-3 py-2 transition",
+            isActiveLink
+              ? "text-primary-500 dark:text-primary-400"
+              : "hover:text-primary-500 dark:hover:text-primary-400"
+          )}
+        >
+          {text}
+          {isActiveLink ? (
+            <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-400/0 dark:via-primary-400/40 dark:to-primary-400/0"></span>
+          ) : null}
+        </a>
+      </Link>
+    </li>
   );
 };
 
@@ -25,6 +39,18 @@ const MobileNavItem = ({ href, children }) => {
         <a className="block py-2">{children}</a>
       </Popover.Button>
     </li>
+  );
+};
+
+export const DesktopNavigation = () => {
+  return (
+    <nav className="pointer-events-auto hidden md:block">
+      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+        {navigationLinks.map(({ id, url, text }) => (
+          <NavItem key={id} url={url} text={text} />
+        ))}
+      </ul>
+    </nav>
   );
 };
 
