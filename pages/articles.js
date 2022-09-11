@@ -5,7 +5,7 @@ const Articles = () => {
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <header className="max-w-2xl">
-              <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              <h1 className="h1">
                 Writing on software design, company building, and the aerospace
                 industry.
               </h1>
@@ -35,7 +35,7 @@ const Articles = () => {
                         </h2>
                         <time
                           className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500 md:hidden"
-                          datetime="2022-09-05"
+                          dateTime="2022-09-05"
                         >
                           <span
                             className="absolute inset-y-0 left-0 flex items-center"
@@ -65,16 +65,16 @@ const Articles = () => {
                           >
                             <path
                               d="M6.75 5.75 9.25 8l-2.5 2.25"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             ></path>
                           </svg>
                         </div>
                       </div>
                       <time
                         className="relative z-10 order-first mt-1 mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 md:block"
-                        datetime="2022-09-05"
+                        dateTime="2022-09-05"
                       >
                         September 5, 2022
                       </time>
