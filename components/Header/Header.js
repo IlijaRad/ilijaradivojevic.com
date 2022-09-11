@@ -1,6 +1,7 @@
 import ThemeToggler from "./ThemeToggler";
 import MenuButton from "./MenuButton";
 import Navigation from "./Navigation";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -25,19 +26,20 @@ const Header = () => {
               >
                 <div className="relative">
                   <div className="absolute left-0 top-3 h-10 w-10 origin-left rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition-opacity dark:bg-zinc-800/90 dark:ring-white/10">
-                    <a
-                      href=""
-                      className="pointer-events-none block h-16 w-16 origin-left"
-                      style={{
-                        transform: "var(--avatar-image-transform)",
-                      }}
-                    >
-                      <img
-                        src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&w=256&q=100"
-                        alt="A"
-                        className="h-16 w-16 rounded-full bg-zinc-100 object-cover text-transparent dark:bg-zinc-800"
-                      />
-                    </a>
+                    <Link href="/">
+                      <a
+                        className="pointer-events-auto block h-16 w-16 origin-left"
+                        style={{
+                          transform: "var(--avatar-image-transform)",
+                        }}
+                      >
+                        <img
+                          src="https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&w=256&q=100"
+                          alt="A"
+                          className="h-16 w-16 rounded-full bg-zinc-100 object-cover text-transparent dark:bg-zinc-800"
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
