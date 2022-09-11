@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import clsx from "clsx";
 
 const NavigationLink = ({ url, text }) => {
   const { asPath } = useRouter();
@@ -8,10 +9,12 @@ const NavigationLink = ({ url, text }) => {
     <li>
       <Link href={url}>
         <a
-          className={
-            "relative block px-3 py-2 transition dark:hover:text-primary-400 " +
-            (isActiveLink ? "text-primary-500" : "hover:text-primary-500")
-          }
+          className={clsx(
+            "relative block px-3 py-2 transition",
+            isActiveLink
+              ? "text-primary-500 dark:text-primary-400"
+              : "hover:text-primary-500 dark:hover:text-primary-400"
+          )}
         >
           {text}
           {isActiveLink ? (
