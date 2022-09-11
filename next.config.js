@@ -2,6 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {
+    newNextLinkBehavior: true,
+    scrollRestoration: true,
+    images: {
+      allowFutureImage: true,
+    },
+  },
 
   webpack(config) {
     config.module.rules.push({

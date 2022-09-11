@@ -1,5 +1,5 @@
 import { navigationLinks } from "../../static/navigationLinks";
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
@@ -35,8 +35,8 @@ const NavItem = ({ url, text }) => {
 const MobileNavItem = ({ href, children }) => {
   return (
     <li>
-      <Popover.Button as={Link} href={href}>
-        <a className="block py-2">{children}</a>
+      <Popover.Button as={Link} href={href} className="block py-2">
+        <a>{children}</a>
       </Popover.Button>
     </li>
   );
@@ -97,11 +97,11 @@ export const MobileNavigation = (props) => {
               </div>
               <nav className="mt-6">
                 <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                  <MobileNavItem href="/aboutz">About</MobileNavItem>
-                  <MobileNavItem href="/articlesz">Articles</MobileNavItem>
-                  <MobileNavItem href="/projectsz">Projects</MobileNavItem>
-                  <MobileNavItem href="/speakingz">Speaking</MobileNavItem>
-                  <MobileNavItem href="/usesz">Uses</MobileNavItem>
+                  {navigationLinks.map(({ id, url, text }) => (
+                    <MobileNavItem key={id} href={url}>
+                      {text}
+                    </MobileNavItem>
+                  ))}
                 </ul>
               </nav>
             </Popover.Panel>
