@@ -1,5 +1,5 @@
-import QuantoxLogo from "../public/images/quantox-logo.png";
-import Placeholder from "../public/images/company-placeholder.png";
+import QuantoxLogo from "@/public/images/quantox-logo.png";
+import Placeholder from "@/public/images/company-placeholder.png";
 
 export const jobs = [
   {

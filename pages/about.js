@@ -1,8 +1,8 @@
 import Image from "next/future/image";
-import EmailIcon from "../components/Icons/EmailIcon";
-import GithubIcon from "../components/Icons/GithubIcon";
-import LinkedInIcon from "../components/Icons/LinkedInIcon";
-import portraitImage from "../public/images/portrait.webp";
+import EmailIcon from "@/components/Icons/EmailIcon";
+import GithubIcon from "@/components/Icons/GithubIcon";
+import LinkedInIcon from "@/components/Icons/LinkedInIcon";
+import portraitImage from "@/public/images/portrait.webp";
 
 const About = () => {
   return (

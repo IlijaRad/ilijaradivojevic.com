@@ -1,4 +1,4 @@
-import { footerLinks } from "../../static/footerLinks";
+import { footerLinks } from "@/static/footerLinks";
 import FooterLink from "./FooterLink";
 
 const Footer = () => {

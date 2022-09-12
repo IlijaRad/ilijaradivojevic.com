@@ -1,4 +1,4 @@
-import QuantoxLogo from "../public/images/quantox-logo.png";
+import QuantoxLogo from "@/public/images/quantox-logo.png";
 
 export const projects = [
   {
