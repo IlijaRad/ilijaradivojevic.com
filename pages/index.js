@@ -4,9 +4,24 @@ import { articles } from "../static/articles";
 
 import SocialLink from "../components/SocialLink";
 import HomePageImage from "../components/HomePageImage";
-import Article from "../components/Article";
 import NewsLetterForm from "../components/NewsLetterForm";
 import Work from "../components/Work/Work";
+import { Card } from "../components/Card";
+
+import { formatDate } from "../lib/formatDate";
+
+const Article = ({ date, title, description, slug }) => {
+  return (
+    <Card as="article">
+      <Card.Title href={`/articles/${slug}`}>{title}</Card.Title>
+      <Card.Eyebrow as="time" dateTime={date} decorate>
+        {formatDate(date)}
+      </Card.Eyebrow>
+      <Card.Description>{description}</Card.Description>
+      <Card.Cta>Read article</Card.Cta>
+    </Card>
+  );
+};
 
 export default function Home() {
   return (

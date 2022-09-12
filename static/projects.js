@@ -1,8 +1,9 @@
+import QuantoxLogo from "../public/images/quantox-logo.png";
+
 export const projects = [
   {
     id: 1,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: QuantoxLogo,
     linkURL: "http://planetaria.tech",
     projName: "Planetaria",
     linkText: "http://planetaria.tech",
@@ -11,8 +12,7 @@ export const projects = [
   },
   {
     id: 2,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: QuantoxLogo,
     linkURL: "http://planetaria.tech",
     projName: "Planetaria",
     linkText: "http://planetaria.tech",
@@ -21,8 +21,7 @@ export const projects = [
   },
   {
     id: 3,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: QuantoxLogo,
     linkURL: "http://planetaria.tech",
     projName: "Planetaria",
     linkText: "http://planetaria.tech",
@@ -31,8 +30,7 @@ export const projects = [
   },
   {
     id: 4,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: QuantoxLogo,
     linkURL: "http://planetaria.tech",
     projName: "Planetaria",
     linkText: "http://planetaria.tech",
@@ -41,8 +39,7 @@ export const projects = [
   },
   {
     id: 5,
-    imgSrc:
-      "https://spotlight.tailwindui.com/_next/static/media/planetaria.ecd81ade.svg",
+    imgSrc: QuantoxLogo,
     linkURL: "http://planetaria.tech",
     projName: "Planetaria",
     linkText: "http://planetaria.tech",

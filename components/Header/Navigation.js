@@ -1,5 +1,5 @@
 import { navigationLinks } from "../../static/navigationLinks";
-import { Fragment, useRef } from "react";
+import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
