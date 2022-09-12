@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import Link from "next/link";
 import clsx from "clsx";
 import AvatarImg from "../../public/images/avatar.webp";
@@ -17,19 +17,22 @@ export const AvatarContainer = ({ className, ...props }) => {
 
 export const Avatar = ({ large = false, className, ...props }) => {
   return (
-    <Link href="/" aria-label="Home" {...props}>
-      <a className={clsx(className, "pointer-events-auto")}>
-        <Image
-          src={AvatarImg}
-          alt=""
-          sizes={large ? "4rem" : "2.25rem"}
-          className={clsx(
-            "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800",
-            large ? "h-16 w-16" : "h-9 w-9"
-          )}
-          priority
-        />
-      </a>
+    <Link
+      href="/"
+      aria-label="Home"
+      className={clsx(className, "pointer-events-auto")}
+      {...props}
+    >
+      <Image
+        src={AvatarImg}
+        alt=""
+        sizes={large ? "4rem" : "2.25rem"}
+        className={clsx(
+          "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800",
+          large ? "h-16 w-16" : "h-9 w-9"
+        )}
+        priority
+      />
     </Link>
   );
 };

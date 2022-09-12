@@ -1,3 +1,5 @@
+import Image from "next/future/image";
+
 const HomePageImage = ({ src, alt = "", rotateNegative = false }) => {
   return (
     <div
@@ -6,10 +8,10 @@ const HomePageImage = ({ src, alt = "", rotateNegative = false }) => {
         (rotateNegative ? "-rotate-2" : "rotate-2")
       }
     >
-      <img
+      <Image
         src={src}
         alt={alt}
-        loading="lazy"
+        sizes="(min-width: 640px) 18rem, 11rem"
         className="absolute inset-0 h-full w-full object-cover"
       />
     </div>

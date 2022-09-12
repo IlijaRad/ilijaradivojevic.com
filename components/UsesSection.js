@@ -1,3 +1,14 @@
+import { Card } from "../components/Card";
+
+const Tool = ({ heading, children }) => {
+  return (
+    <Card as="li">
+      <Card.Title as="h3">{heading}</Card.Title>
+      <Card.Description>{children}</Card.Description>
+    </Card>
+  );
+};
+
 const UsesSection = ({ heading, items }) => {
   return (
     <section
@@ -14,14 +25,9 @@ const UsesSection = ({ heading, items }) => {
         <div className="md:col-span-3">
           <ul role="list" className="space-y-16">
             {items.map(({ id, heading, body }) => (
-              <li key={id} className="group relative flex flex-col items-start">
-                <h3 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-                  {heading}
-                </h3>
-                <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  {body}
-                </p>
-              </li>
+              <Tool key={id} heading={heading}>
+                {body}
+              </Tool>
             ))}
           </ul>
         </div>

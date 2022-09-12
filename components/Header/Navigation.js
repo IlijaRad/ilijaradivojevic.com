@@ -13,20 +13,19 @@ const NavItem = ({ url, text }) => {
   const isActiveLink = asPath === url;
   return (
     <li>
-      <Link href={url}>
-        <a
-          className={clsx(
-            "relative block px-3 py-2 transition",
-            isActiveLink
-              ? "text-primary-500 dark:text-primary-400"
-              : "hover:text-primary-500 dark:hover:text-primary-400"
-          )}
-        >
-          {text}
-          {isActiveLink ? (
-            <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-400/0 dark:via-primary-400/40 dark:to-primary-400/0"></span>
-          ) : null}
-        </a>
+      <Link
+        className={clsx(
+          "relative block px-3 py-2 transition",
+          isActiveLink
+            ? "text-primary-500 dark:text-primary-400"
+            : "hover:text-primary-500 dark:hover:text-primary-400"
+        )}
+        href={url}
+      >
+        {text}
+        {isActiveLink ? (
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-400/0 dark:via-primary-400/40 dark:to-primary-400/0"></span>
+        ) : null}
       </Link>
     </li>
   );
@@ -35,8 +34,8 @@ const NavItem = ({ url, text }) => {
 const MobileNavItem = ({ href, children }) => {
   return (
     <li>
-      <Popover.Button as={Link} href={href}>
-        <a className="block py-2">{children}</a>
+      <Popover.Button as={Link} href={href} className="block py-2">
+        {children}
       </Popover.Button>
     </li>
   );
@@ -97,11 +96,11 @@ export const MobileNavigation = (props) => {
               </div>
               <nav className="mt-6">
                 <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                  <MobileNavItem href="/aboutz">About</MobileNavItem>
-                  <MobileNavItem href="/articlesz">Articles</MobileNavItem>
-                  <MobileNavItem href="/projectsz">Projects</MobileNavItem>
-                  <MobileNavItem href="/speakingz">Speaking</MobileNavItem>
-                  <MobileNavItem href="/usesz">Uses</MobileNavItem>
+                  {navigationLinks.map(({ id, url, text }) => (
+                    <MobileNavItem key={id} href={url}>
+                      {text}
+                    </MobileNavItem>
+                  ))}
                 </ul>
               </nav>
             </Popover.Panel>

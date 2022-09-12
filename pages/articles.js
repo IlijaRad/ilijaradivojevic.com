@@ -1,4 +1,24 @@
-import ChevronRightIcon from "../public/icons/chevron-right.svg";
+import { formatDate } from "../lib/formatDate";
+import { articles } from "../static/articles";
+import { Card } from "../components/Card";
+
+const Article = ({ date, title, description, slug }) => {
+  return (
+    <article className="md:grid md:grid-cols-4 md:items-baseline">
+      <Card className="md:col-span-3">
+        <Card.Title href={`/articles/${slug}`}>{title}</Card.Title>
+        <Card.Eyebrow as="time" dateTime={date} className="md:hidden" decorate>
+          {formatDate(date)}
+        </Card.Eyebrow>
+        <Card.Description>{description}</Card.Description>
+        <Card.Cta>Read article</Card.Cta>
+      </Card>
+      <Card.Eyebrow as="time" dateTime={date} className="mt-1 hidden md:block">
+        {formatDate(date)}
+      </Card.Eyebrow>
+    </article>
+  );
+};
 
 const Articles = () => {
   return (
@@ -19,56 +39,14 @@ const Articles = () => {
             <div className="mt-16 sm:mt-20">
               <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                 <div className="flex max-w-3xl flex-col space-y-16">
-                  {[1, 2, 3].map((i) => (
-                    <article
-                      key={i}
-                      className="md:grid md:grid-cols-4 md:items-baseline"
-                    >
-                      <div className="group relative flex flex-col items-start md:col-span-3">
-                        <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-                          <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                          <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
-                            <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                            <span className="relative z-10">
-                              Crafting a design system for a multiplanetary
-                              future
-                            </span>
-                          </a>
-                        </h2>
-                        <time
-                          className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500 md:hidden"
-                          dateTime="2022-09-05"
-                        >
-                          <span
-                            className="absolute inset-y-0 left-0 flex items-center"
-                            aria-hidden="true"
-                          >
-                            <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
-                          </span>
-                          September 5, 2022
-                        </time>
-                        <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                          Most companies try to stay ahead of the curve when it
-                          comes to visual design, but for Planetaria we needed
-                          to create a brand that would still inspire us 100
-                          years from now when humanity has spread across our
-                          entire solar system.
-                        </p>
-                        <div
-                          aria-hidden="true"
-                          className="relative z-10 mt-4 flex items-center text-sm font-medium text-primary-500"
-                        >
-                          Read article
-                          <ChevronRightIcon />
-                        </div>
-                      </div>
-                      <time
-                        className="relative z-10 order-first mt-1 mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 md:block"
-                        dateTime="2022-09-05"
-                      >
-                        September 5, 2022
-                      </time>
-                    </article>
+                  {articles.map(({ id, date, title, description, slug }) => (
+                    <Article
+                      key={id}
+                      date={date}
+                      title={title}
+                      description={description}
+                      slug={slug}
+                    />
                   ))}
                 </div>
               </div>
