@@ -1,64 +1,74 @@
 export const usesData = [
   {
     id: 1,
-    heading: "Workstation",
+    heading: "Tech",
     items: [
       {
         id: 1,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "React",
+        body: "The most used frontend in the world.",
       },
       {
         id: 2,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "Prettier",
+        body: "Writing code without Prettier for me is unthinkable.",
       },
       {
         id: 3,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "TailwindCSS",
+        body: "I'm the most productive writing css with utility classes and TailwindCSS is by far the best framework that's based on utility classes.",
+      },
+      {
+        id: 4,
+        heading: "Typescript",
+        body: "I usually use this for larger projects.",
+      },
+      {
+        id: 5,
+        heading: "SWR",
+        body: "I use this to manage server state.",
+      },
+      {
+        id: 6,
+        heading: "PostCSS",
+        body: "I use this with tailwind and autoprefixer plugins.",
       },
     ],
   },
   {
     id: 2,
-    heading: "Workstation",
+    heading: "Editor",
     items: [
       {
         id: 1,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
-      },
-      {
-        id: 2,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
-      },
-      {
-        id: 3,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "Visual Studio Code",
+        body: "This one is highly customizable, fast, has a good CLI and let's you run commands.",
       },
     ],
   },
   {
     id: 3,
-    heading: "Workstation",
+    heading: "Browser extensions",
     items: [
       {
         id: 1,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "Github Repo Size",
+        body: "This extension let's you view the sizes of github repositories.",
       },
       {
         id: 2,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "PixelZoomer",
+        body: "This extension is useful for centering text, inspecting margins and paddings accurately.",
       },
       {
         id: 3,
-        heading: "16” MacBook Pro, M1 Max, 64GB RAM (2021",
-        body: "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+        heading: "WhatFont",
+        body: "This extension let's you inspect fonts without going into devtools.",
+      },
+      {
+        id: 4,
+        heading: "uBlock Origin",
+        body: "This extension should not only be used by developers but by everyone that doesn't like ads.",
       },
     ],
   },

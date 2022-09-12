@@ -47,12 +47,12 @@ const Articles = ({ articles }) => {
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <header className="max-w-2xl">
               <h1 className="h1">
-                Writing on software design, company building, and the aerospace
-                industry.
+                Writing on web development, things I like to build and my
+                journey.
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                All of my long-form thoughts on programming, leadership, product
-                design, and more, collected in chronological order.
+                All of my long-form thoughts on programming, application design,
+                and more, collected in chronological order.
               </p>
             </header>
             <div className="mt-16 sm:mt-20">
