@@ -1,7 +1,7 @@
 import Image from "next/future/image";
 import Link from "next/link";
 import clsx from "clsx";
-import AvatarImg from "../../public/images/avatar.webp";
+import AvatarImg from "@/public/images/avatar.webp";
 
 export const AvatarContainer = ({ className, ...props }) => {
   return (

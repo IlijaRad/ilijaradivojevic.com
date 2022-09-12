@@ -1,8 +1,8 @@
-import { jobs } from "../../static/jobs";
+import { jobs } from "@/static/jobs";
 import JobListing from "./JobListing";
 
-import ArrowDownIcon from "../../public/icons/arrow-down.svg";
-import BriefcaseIcon from "../../public/icons/briefcase.svg";
+import ArrowDownIcon from "@/public/icons/arrow-down.svg";
+import BriefcaseIcon from "@/public/icons/briefcase.svg";
 
 const Work = () => {
   return (

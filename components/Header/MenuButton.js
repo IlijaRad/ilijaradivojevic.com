@@ -1,4 +1,4 @@
-import CaretDownIcon from "../../public/icons/caret-down.svg";
+import CaretDownIcon from "@/public/icons/caret-down.svg";
 
 const MenuButton = () => {
   return (

@@ -1,5 +1,5 @@
-import { usesData } from "../static/usesData";
-import UsesSection from "../components/UsesSection";
+import { usesData } from "@/static/usesData";
+import UsesSection from "@/components/UsesSection";
 
 const Uses = () => {
   return (

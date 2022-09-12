@@ -1,4 +1,4 @@
-import EmailIcon from "../public/icons/email.svg";
+import EmailIcon from "@/public/icons/email.svg";
 
 const NewsLetterForm = () => {
   return (

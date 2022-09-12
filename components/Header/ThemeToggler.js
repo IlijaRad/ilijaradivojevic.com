@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
-import SunIcon from "../../public/icons/sun.svg";
-import MoonIcon from "../../public/icons/moon.svg";
+import SunIcon from "@/public/icons/sun.svg";
+import MoonIcon from "@/public/icons/moon.svg";
 
 const ThemeToggler = () => {
   const { systemTheme, theme, setTheme } = useTheme();
