@@ -1,26 +1,45 @@
-import { formatDate } from "../lib/formatDate";
-import { articles } from "../static/articles";
-import { Card } from "../components/Card";
+import { formatDate } from "@/lib/formatDate";
+import { Card } from "@/components/Card";
+import { getAllArticles } from "@/lib/getAllArticles";
 
-const Article = ({ date, title, description, slug }) => {
+export async function getStaticProps() {
+  return {
+    props: {
+      articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
+    },
+  };
+}
+
+const Article = ({ article }) => {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/articles/${slug}`}>{title}</Card.Title>
-        <Card.Eyebrow as="time" dateTime={date} className="md:hidden" decorate>
-          {formatDate(date)}
+        <Card.Title href={`/articles/${article.slug}`}>
+          {article.title}
+        </Card.Title>
+        <Card.Eyebrow
+          as="time"
+          dateTime={article.date}
+          className="md:hidden"
+          decorate
+        >
+          {formatDate(article.date)}
         </Card.Eyebrow>
-        <Card.Description>{description}</Card.Description>
+        <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
-      <Card.Eyebrow as="time" dateTime={date} className="mt-1 hidden md:block">
-        {formatDate(date)}
+      <Card.Eyebrow
+        as="time"
+        dateTime={article.date}
+        className="mt-1 hidden md:block"
+      >
+        {formatDate(article.date)}
       </Card.Eyebrow>
     </article>
   );
 };
 
-const Articles = () => {
+const Articles = ({ articles }) => {
   return (
     <div className="mt-16 sm:mt-32 sm:px-8">
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -39,14 +58,8 @@ const Articles = () => {
             <div className="mt-16 sm:mt-20">
               <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                 <div className="flex max-w-3xl flex-col space-y-16">
-                  {articles.map(({ id, date, title, description, slug }) => (
-                    <Article
-                      key={id}
-                      date={date}
-                      title={title}
-                      description={description}
-                      slug={slug}
-                    />
+                  {articles.map((article) => (
+                    <Article key={article.slug} article={article} />
                   ))}
                 </div>
               </div>

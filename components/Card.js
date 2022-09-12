@@ -1,6 +1,6 @@
 import Link from "next/link";
 import clsx from "clsx";
-import ChevronRightIcon from "../public/icons/chevron-right.svg";
+import ChevronRightIcon from "@/public/icons/chevron-right.svg";
 
 export function Card({ as: Component = "div", className, children }) {
   return (

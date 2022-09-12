@@ -1,12 +1,12 @@
-import { navigationLinks } from "../../static/navigationLinks";
+import { navigationLinks } from "@/static/navigationLinks";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
 import Link from "next/link";
 
-import CaretDownIcon from "../../public/icons/caret-down.svg";
-import CloseIcon from "../../public/icons/close.svg";
+import CaretDownIcon from "@/public/icons/caret-down.svg";
+import CloseIcon from "@/public/icons/close.svg";
 
 const NavItem = ({ url, text }) => {
   const { asPath } = useRouter();

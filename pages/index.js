@@ -1,29 +1,41 @@
-import { socialLinks } from "../static/socialLinks";
-import { homePageImages } from "../static/homePageImages";
-import { articles } from "../static/articles";
+import { socialLinks } from "@/static/socialLinks";
+import { homePageImages } from "@/static/homePageImages";
 
-import SocialLink from "../components/SocialLink";
-import HomePageImage from "../components/HomePageImage";
-import NewsLetterForm from "../components/NewsLetterForm";
-import Work from "../components/Work/Work";
-import { Card } from "../components/Card";
+import SocialLink from "@/components/SocialLink";
+import HomePageImage from "@/components/HomePageImage";
+import NewsLetterForm from "@/components/NewsLetterForm";
+import Work from "@/components/Work/Work";
+import { Card } from "@/components/Card";
 
 import { formatDate } from "../lib/formatDate";
+import { getAllArticles } from "../lib/getAllArticles";
 
-const Article = ({ date, title, description, slug }) => {
+export async function getStaticProps() {
+  return {
+    props: {
+      articles: (await getAllArticles())
+        .slice(0, 4)
+        .map(({ component, ...meta }) => meta),
+    },
+  };
+}
+
+const Article = ({ article }) => {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${slug}`}>{title}</Card.Title>
-      <Card.Eyebrow as="time" dateTime={date} decorate>
-        {formatDate(date)}
+      <Card.Title href={`/articles/${article.slug}`}>
+        {article.title}
+      </Card.Title>
+      <Card.Eyebrow as="time" dateTime={article.date} decorate>
+        {formatDate(article.date)}
       </Card.Eyebrow>
-      <Card.Description>{description}</Card.Description>
+      <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
   );
 };
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <>
       <div className="mt-9 sm:px-8">
@@ -66,14 +78,8 @@ export default function Home() {
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
               <div className="flex flex-col gap-16">
-                {articles.map(({ id, date, title, description, slug }) => (
-                  <Article
-                    key={id}
-                    date={date}
-                    title={title}
-                    description={description}
-                    slug={slug}
-                  />
+                {articles.map((article) => (
+                  <Article key={article.slug} article={article} />
                 ))}
               </div>
               <div className="space-y-10 lg:pl-16 xl:pl-24">

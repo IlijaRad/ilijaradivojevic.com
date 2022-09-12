@@ -1,5 +1,5 @@
-import Project from "../components/Project";
-import { projects } from "../static/projects";
+import Project from "@/components/Project";
+import { projects } from "@/static/projects";
 
 const Projects = () => {
   return (

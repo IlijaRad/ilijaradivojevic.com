@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import LinkIcon from "../public/icons/link.svg";
+import LinkIcon from "@/public/icons/link.svg";
 import { Card } from "./Card";
 
 const Project = ({ imgSrc, linkURL, projName, linkText, projDescription }) => {
