@@ -9,9 +9,7 @@ const Projects = () => {
           <div className="relative px-4 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <header className="max-w-2xl">
-                <h1 className="h1">
-                  Things I&apos;ve made trying to put my dent in the universe.
-                </h1>
+                <h1 className="h1">Things I&apos;ve made in my spare time.</h1>
                 <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                   I&apos;ve worked on tons of little projects over the years but
                   these are the ones that I&apos;m most proud of. Many of them
