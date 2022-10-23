@@ -1,49 +1,13 @@
 import QuantoxLogo from "@/public/images/quantox-logo.png";
+import GreenleafstudioapartmentsLogo from "@/public/images/greenleafstudioapartments.png";
 
 export const projects = [
   {
     id: 1,
-    imgSrc: QuantoxLogo,
-    linkURL: "http://planetaria.tech",
-    projName: "Planetaria",
-    linkText: "http://planetaria.tech",
-    projDescription:
-      "Creating technology to empower civilians to explore space on their own terms.",
-  },
-  {
-    id: 2,
-    imgSrc: QuantoxLogo,
-    linkURL: "http://planetaria.tech",
-    projName: "Planetaria",
-    linkText: "http://planetaria.tech",
-    projDescription:
-      "Creating technology to empower civilians to explore space on their own terms.",
-  },
-  {
-    id: 3,
-    imgSrc: QuantoxLogo,
-    linkURL: "http://planetaria.tech",
-    projName: "Planetaria",
-    linkText: "http://planetaria.tech",
-    projDescription:
-      "Creating technology to empower civilians to explore space on their own terms.",
-  },
-  {
-    id: 4,
-    imgSrc: QuantoxLogo,
-    linkURL: "http://planetaria.tech",
-    projName: "Planetaria",
-    linkText: "http://planetaria.tech",
-    projDescription:
-      "Creating technology to empower civilians to explore space on their own terms.",
-  },
-  {
-    id: 5,
-    imgSrc: QuantoxLogo,
-    linkURL: "http://planetaria.tech",
-    projName: "Planetaria",
-    linkText: "http://planetaria.tech",
-    projDescription:
-      "Creating technology to empower civilians to explore space on their own terms.",
+    imgSrc: GreenleafstudioapartmentsLogo,
+    linkURL: "https://apartments-ilija.vercel.app/",
+    projName: "Greenleafstudioapartments",
+    linkText: "https://apartments-ilija.vercel.app/",
+    projDescription: `A modern, upscale hospitality that is passionate about "making moments" and offering unforgettable experiences.`,
   },
 ];
