@@ -3,7 +3,6 @@ import { homePageImages } from "@/static/homePageImages";
 
 import SocialLink from "@/components/SocialLink";
 import HomePageImage from "@/components/HomePageImage";
-import NewsLetterForm from "@/components/NewsLetterForm";
 import Work from "@/components/Work/Work";
 import { Card } from "@/components/Card";
 
@@ -83,7 +82,6 @@ export default function Home({ articles }) {
                 ))}
               </div>
               <div className="space-y-10 lg:pl-16 xl:pl-24">
-                <NewsLetterForm />
                 <Work />
               </div>
             </div>
