@@ -37,6 +37,13 @@ const Article = ({ article }) => {
 export default function Home({ articles }) {
   return (
     <>
+      {getSocialMetas(
+        "https://ilijaradivojevic.com",
+        "Ilija Radivojevic",
+        "Hello. My name is Ilija Radivojevic and I am a front end software engineer. I try to make life easier and world a better place by writing good software.",
+        "",
+        "Ilija Radivojevic, Front end developer, Javascript, React, Typescript, Nextjs, Software development, Software engineer, Front end engineer"
+      )}
       <div className="mt-9 sm:px-8">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="relative px-4 sm:px-8 lg:px-12">
