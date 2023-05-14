@@ -7,11 +7,7 @@ const nextConfig = {
   pageExtensions: ["js", "mdx"],
   reactStrictMode: true,
   experimental: {
-    newNextLinkBehavior: true,
     scrollRestoration: true,
-    images: {
-      allowFutureImage: true,
-    },
   },
   webpack(config) {
     config.module.rules.push({

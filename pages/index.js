@@ -42,10 +42,10 @@ export default function Home({ articles }) {
           <div className="relative px-4 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <div className="max-w-2xl">
-                <h1 className="h1">Software developer</h1>
+                <h1 className="h1">Software engineer</h1>
                 <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                  I&apos;m Ilija, a front-end developer based in Belgrade. I
-                  build front-ends with simple modern UIs using latest web
+                  I&apos;m Ilija, a software engineer based in Subotica. I build
+                  front-ends with simple modern UIs using latest web
                   technologies.
                 </p>
                 <div className="mt-6 flex gap-6">
