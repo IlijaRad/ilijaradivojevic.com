@@ -1,22 +1,28 @@
-import QuantoxLogo from "@/public/images/quantox-logo.png";
-import Placeholder from "@/public/images/company-placeholder.png";
+import QuantoxLogo from "@/public/images/quantox-logo.webp";
+import InfostudLogo from "@/public/images/infostud.webp";
 
 export const jobs = [
   {
     id: 1,
-    imgSrc: QuantoxLogo,
-    imgAlt: "Quantox Technology",
-    company: "Quantox Technology",
-    role: "Medior Front End Developer",
-    startDate: "2021",
+    imgSrc: InfostudLogo,
+    company: "Infostud",
+    role: "Software Engineer",
+    startDate: "2023",
     endDate: "Present",
   },
   {
     id: 2,
-    imgSrc: Placeholder,
-    imgAlt: "Freelance",
+    imgSrc: QuantoxLogo,
+    company: "Quantox Technology",
+    role: "Front End Software Engineer",
+    startDate: "2021",
+    endDate: "2023",
+  },
+  {
+    id: 3,
+    imgSrc: null,
     company: "Freelance",
-    role: "Web Developer",
+    role: "Front End Software Engineer",
     startDate: "2020",
     endDate: "2021",
   },

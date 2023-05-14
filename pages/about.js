@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import EmailIcon from "@/components/Icons/EmailIcon";
 import GithubIcon from "@/components/Icons/GithubIcon";
 import LinkedInIcon from "@/components/Icons/LinkedInIcon";
@@ -23,41 +23,58 @@ const About = () => {
               </div>
               <div className="lg:order-first lg:row-span-2">
                 <h1 className="h1">
-                  I&apos;m Ilija Radivojević. I live in Belgrade, where I turn
-                  ideas into reality.
+                  Ilija Radivojević: Subotica&apos;s Conduit for Reality-Bound
+                  Ideas.
                 </h1>
                 <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                   <p>
-                    I&apos;ve loved making things for as long as I can remember,
-                    and wrote my first program when I was 6 years old, just two
-                    weeks after my mom brought home the brand new Pentium III
-                    that I taught myself to type on.
+                    From the moment I could string together sentences, a
+                    passionate curiosity for creation has been my constant
+                    companion. My first encounter with programming occurred at
+                    the tender age of six, a mere fortnight after my mother
+                    introduced me to our gleaming new Pentium III. On this
+                    technological marvel, I embarked on a self-taught typing
+                    journey.
                   </p>
                   <p>
-                    The thing that got me into coding was my laziness. I hated
-                    doing repetetive tasks on my pc so I figured, why not
-                    automate it? That&apos;s what got me into Visual Basic and
-                    later AutoIt. I could always automate the boring tasks on my
-                    pc. I also enjoyed playing video games and sometimes when a
-                    game would got too boring I used to make bots and cheats for
-                    fun. I used to use AutoIt for making auto-clicker bots with
-                    pixel detection, used Cheat Engine for games that stored
-                    variables on the client and later found out about WPE Pro.
+                    Interestingly, it was my distaste for monotony that nudged
+                    me towards the fascinating world of coding. I was irked by
+                    the repetitive tasks that my PC demanded of me and thought,
+                    &quot;Why not delegate this to the machine?&quot; Thus, I
+                    found myself immersed in the realms of Visual Basic and
+                    later, AutoIt, enabling me to automate the tedious chores on
+                    my PC.
                   </p>
                   <p>
-                    WPE Pro is a packet editor that was most widely used to hack
-                    multiplayer games. Since it was so easy to hack client side
-                    games, hacking client side games lost the appeal for me and
-                    then I started getting more interested in the Web. Of course
-                    I realized that this hacking is unethical and that I will do
-                    something else for a living. By the time I was 14 I already
-                    knew XHTML and CSS basic and in high school I learned some
-                    Javascript, PHP and MySQL.
+                    My leisure hours were filled with the thrill of video
+                    gaming. However, when the games started to lose their charm,
+                    I turned my coding skills towards crafting bots and cheats,
+                    purely for amusement. My toolbox included AutoIt for
+                    creating auto-clicker bots using pixel detection, Cheat
+                    Engine for games that housed variables client-side, and
+                    eventually, I discovered the capabilities of WPE Pro.
                   </p>
                   <p>
-                    Today, I work in Quantox Technology, where we&apos;re
-                    turning peoples ideas into businesses. And I&apos;m really
-                    proud to be a part of the team.
+                    WPE Pro, a prominent packet editor, was predominantly used
+                    for manipulating multiplayer games. While it made hacking
+                    client-side games a walk in the park, I soon found myself
+                    yearning for a more formidable challenge. This was when the
+                    expansive universe of the Web caught my attention. With a
+                    newfound understanding of ethical responsibilities, I
+                    decided that my future lay in more constructive endeavours.
+                  </p>
+                  <p>
+                    By the age of 14, I was fluent in XHTML and CSS basics. My
+                    high school years further enriched my programming arsenal
+                    with Javascript, PHP, and MySQL.
+                  </p>
+                  <p>
+                    Today, I hold a cherished place within the Poslovi Infostud
+                    team, an exceptional collective that&apos;s dedicated to
+                    bridging the gap between job seekers and their dream roles.
+                    It&apos;s an honor to employ my talents in this crucial
+                    mission, fueling my enduring passion for innovative
+                    solutions and creative problem-solving.
                   </p>
                 </div>
               </div>
