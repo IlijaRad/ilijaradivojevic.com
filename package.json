@@ -1,6 +1,6 @@
 {
-  "name": "new_portfolio",
-  "version": "0.1.0",
+  "name": "ilijaradivojevic.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
