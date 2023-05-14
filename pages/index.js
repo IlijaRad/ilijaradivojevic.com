@@ -8,6 +8,7 @@ import { Card } from "@/components/Card";
 
 import { formatDate } from "../lib/formatDate";
 import { getAllArticles } from "../lib/getAllArticles";
+import { getSocialMetas } from "@/utils/getSocialMetas";
 
 export async function getStaticProps() {
   return {
