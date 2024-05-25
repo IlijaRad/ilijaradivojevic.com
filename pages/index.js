@@ -52,7 +52,7 @@ export default function Home({ articles }) {
               <div className="max-w-2xl">
                 <h1 className="h1">Software engineer</h1>
                 <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                  I&apos;m Ilija, a software engineer based in Subotica. I build
+                  I&apos;m Ilija, a software engineer based in Belgrade. I build
                   front-ends with simple modern UIs using latest web
                   technologies.
                 </p>
