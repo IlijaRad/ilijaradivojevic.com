@@ -25,11 +25,6 @@ export const usesData = [
       },
       {
         id: 5,
-        heading: "SWR",
-        body: "I use this to manage server state.",
-      },
-      {
-        id: 6,
         heading: "PostCSS",
         body: "I use this with tailwind and autoprefixer plugins.",
       },
@@ -69,6 +64,11 @@ export const usesData = [
         id: 4,
         heading: "uBlock Origin",
         body: "This extension should not only be used by developers but by everyone that doesn't like ads.",
+      },
+      {
+        id: 5,
+        heading: "Analytics Debugger",
+        body: "This extension let's you debug google analytics events.",
       },
     ],
   },

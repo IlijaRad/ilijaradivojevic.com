@@ -18,12 +18,12 @@ export const jobs = [
     startDate: "2021",
     endDate: "2023",
   },
-  {
-    id: 3,
-    imgSrc: null,
-    company: "Freelance",
-    role: "Front End Software Engineer",
-    startDate: "2020",
-    endDate: "2021",
-  },
+  // {
+  //   id: 3,
+  //   imgSrc: null,
+  //   company: "Freelance",
+  //   role: "Front End Software Engineer",
+  //   startDate: "2020",
+  //   endDate: "2021",
+  // },
 ];
